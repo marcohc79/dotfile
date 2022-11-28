@@ -85,7 +85,7 @@ alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push origin master'
 
-# pacman and paru ###
+# dnf  ###
 alias update='sudo dnf update' 
 alias install='sudo dnf install '
 

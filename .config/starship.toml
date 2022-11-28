@@ -1,16 +1,22 @@
 format = """
-$username\
-$hostname\
-$directory\
-$git_branch\
-$git_state\
-$git_status\
-$git_metrics\
-$fill\
-$nodejs\
-$cmd_duration $jobs $time\
-$line_break\
-$character"""
+[┌───────────────────>](bold green)
+[│](bold green)$username$rust$hostname$directory$git_branch$git_state$git_status$git_metrics$fill$nodejs$cmd_duration$jobs$time$character
+[└─>](bold green) """
+
+# $username\
+# $hostname\
+# $directory\
+# $git_branch\
+# $git_state\
+# $git_status\
+# $git_metrics\
+# $fill\
+# $nodejs\
+# $cmd_duration $jobs $time\
+# $line_break\
+# $character"""
+
+# command_timeout = 1000
 
 [nodejs]
 format = "[$symbol($version )]($style)"

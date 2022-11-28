@@ -6,12 +6,14 @@
 .config/evolution
 .config/gnome-session
 .config/goa-1.0
+.config/gnome-boxes
 .config/gtk-3.0
 .config/ibus
 .config/imsettings
 .config/inkscape
 .config/Kvantum
 .config/lazygit
+.config/libvirt
 .config/nvim
 .config/pulse
 .config/Thunar
@@ -30,6 +32,7 @@
 .mozilla
 .oh-my-zsh
 .pki
+.ssh
 .vscode
 .bash_history
 .bash_profile
