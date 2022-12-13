@@ -109,6 +109,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm, xK_d), spawn "~/.config/rofi/bin/launcher")
     -- Run xmessage with a summary of the default keybindings (useful for beginners)
     , ((modm .|. shiftMask, xK_slash), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
+
+    , ((mod1Mask .|. controlMask, xK_l), spawn "~/.local/bin/lock")
     ]
   ++
   -- Window navigation
