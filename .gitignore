@@ -1,8 +1,10 @@
 .cache
 .config/abrt
+.config/calibre
 .config/chromium
 .config/Code
 .config/dconf
+.config/discord
 .config/deezer-desktop
 .config/evolution
 .config/gnome-session
