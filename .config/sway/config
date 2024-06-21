@@ -17,7 +17,6 @@ include $HOME/.config/sway/config.d/*
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 
-
 #
 # Status Bar:
 #
