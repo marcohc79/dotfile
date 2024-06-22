@@ -136,14 +136,20 @@
   },
 
   "network": {
-    "interval": 30,
-    "format-wifi": "󰤨   {essid}",
-    "format-ethernet": "󰈀 Wired",
-    "fomat-disconnected": "󱚵 Disconnected",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-    "tooltip-format-ethernet": "{ifname} ",
-    "tooltip-format-disconnected": "Disconnected",
-  },
+    "format-wifi": "{icon}{essid}",
+    // "format-wifi": "{icon}",
+    "format-ethernet": "󰈀",
+    "format-linked": "{ifname} (No IP) 󰈀",
+    "format-disconnected": "󰤮",
+    "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󱚻 "],
+    //"format-alt": "{bandwidthUpBytes}󱚺 {bandwidthDownBytes} 󱚶",
+    "tooltip-format-ethernet": "{ifname}  {ipaddr}/{cidr}",
+    "tooltip-format-wifi": "{ifname}  {essid}  {ipaddr}/{cidr}",
+    // "on-click": "pypr toggle nmtui",
+    "on-click": "kitty -e nmtui",
+    "on-click-right": "rfkill toggle wlan",
+    "max-length": 20,
+	},
   "battery": {
     "states": {
       "warning": 30,

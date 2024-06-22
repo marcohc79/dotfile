@@ -1,5 +1,11 @@
 # User config directory
-include $HOME/.config/sway/config.d/*
+include $HOME/.config/sway/config.d/50-systemd-user.conf
+include $HOME/.config/sway/config.d/app_default.conf
+include $HOME/.config/sway/config.d/input.conf
+include $HOME/.config/sway/config.d/keybindings.conf
+include $HOME/.config/sway/config.d/output.conf
+include $HOME/.config/sway/config.d/theme.conf
+include $HOME/.config/sway/config.d/windows.conf
 
 # Idle configuration
 exec swayidle -w \

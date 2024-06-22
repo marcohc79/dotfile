@@ -2,6 +2,7 @@
 export PATH=~/.npm-global/bin:$PATH 
 export PATH=$PATH:$HOME/.cargo/bin$PATH
 export PATH=$PATH:$HOME/.local/bin:$PATH
+export XDG_CURRENT_DESKTOP=sway
 
 # Batman for manepage
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
