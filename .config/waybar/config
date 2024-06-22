@@ -131,7 +131,8 @@
       "default": ["󰕿", "󰖀", "󰕾"],
     },
     "tooltip": false,
-    "on-click": "pavucontrol",
+    "on-click-right": "pavucontrol",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
   },
 
   "network": {
@@ -200,7 +201,7 @@
 
   "custom/power": {
     "format": "󰐥",
-    "on-click": "~/.config/rofi/bin/power.sh",
+    "on-click": "nwg-bar",
     "tooltip": false,
   },
   "custom/notification": {
