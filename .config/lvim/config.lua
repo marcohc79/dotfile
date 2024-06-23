@@ -9,7 +9,7 @@ lvim.colorscheme = "catppuccin-mocha"
 
 -- Keymappings
 vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-x>', ':q!<CR>', { noremap = true, silent = true })
+--vim.api.nvim_set_keymap('n', '<C-x>', ':q!<CR>', { noremap = true, silent = true })
 
 -- Dvorak
 vim.api.nvim_command([[
@@ -20,6 +20,19 @@ vim.api.nvim_command([[
 lvim.plugins = {
   -- colorscheme
   {"catppuccin/nvim", name = "catppuccin"},
+  -- orgmode
+  {
+    'nvim-orgmode/orgmode',
+    event = 'VeryLazy',
+    ft = { 'org' },
+    config = function()
+      -- Setup orgmode
+      require('orgmode').setup({
+        org_agenda_files = '~/orgfiles/**/*',
+        org_default_notes_file = '~/orgfiles/refile.org',
+      })
+    end,
+  }
 }
 
 -- Format for C

@@ -14,6 +14,12 @@ exec swayidle -w \
     resume 'swaymsg "output * dpms on"' \
     before-sleep 'swaylock -C $HOME/.config/swaylock/config'
 
+# Auth with polkit-gnome
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Gnome Keyring
+exec gnome-keyring-daemon --daemonize --start --components=gpg,pkcs11,secrets,ssh
+
 # Status Bar:
 bar {    
   swaybar_command waybar

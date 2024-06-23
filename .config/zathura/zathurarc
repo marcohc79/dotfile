@@ -1,0 +1,40 @@
+include catppuccin-mocha
+
+# General settings
+set selection-clipboard clipboard
+set recolor true
+
+# Default zoom settings
+set adjust-open width
+
+# Key bindings
+map <C-f> fullscreen
+
+# Navigation
+map h scroll down
+map t scroll up
+map d scroll left
+map n scroll right
+map gg goto top
+map G goto bottom
+map T scroll half-up
+map H scroll half-down
+map i recolor
+
+# Zoom
+map , zoom in
+map . zoom out
+
+# Searc
+map / search forward
+map b search next
+map B search previous
+
+# Open file
+map o open
+map r reload
+map R rotate
+
+# Fullscreen and Presentation
+map <F11> fullscreen
+map <F5> presentation
