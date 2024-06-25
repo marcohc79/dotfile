@@ -93,6 +93,8 @@
       "(.*) Spotify": "󰓇  Spotify",
       "  ~": "  l6174@Radon",
       "(.*) - Obsidian(.*)": "󱓧  Obsidian",
+      "(.*)org.pwmt.zathura(.*)": "  Zathura",
+      "(.*)Telegram(.*)": "  Telegram",
     }
   },
 
