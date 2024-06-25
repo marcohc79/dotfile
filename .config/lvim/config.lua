@@ -1,5 +1,5 @@
--- Read the docs: https://www.lunarvim.org/docs/configuration
 -- Example configs: https://github.com/LunarVim/starter.lvim
+-- Read the docs: https://www.lunarvim.org/docs/configuration
 -- Video Tutorials: https://www.youtube.com/watch?v=sFA9kX-Ud_c&list=PLhoH5vyxr6QqGu0i7tt_XoVK9v-KvZ3m6
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
@@ -9,7 +9,7 @@ lvim.colorscheme = "catppuccin-mocha"
 
 -- Keymappings
 vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
---vim.api.nvim_set_keymap('n', '<C-x>', ':q!<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-x>', ':q!<CR>', { noremap = true, silent = true })
 
 -- Dvorak
 vim.api.nvim_command([[
@@ -20,19 +20,6 @@ vim.api.nvim_command([[
 lvim.plugins = {
   -- colorscheme
   {"catppuccin/nvim", name = "catppuccin"},
-  -- orgmode
-  {
-    'nvim-orgmode/orgmode',
-    event = 'VeryLazy',
-    ft = { 'org' },
-    config = function()
-      -- Setup orgmode
-      require('orgmode').setup({
-        org_agenda_files = '~/orgfiles/**/*',
-        org_default_notes_file = '~/orgfiles/refile.org',
-      })
-    end,
-  }
 }
 
 -- Format for C
@@ -40,4 +27,3 @@ vim.api.nvim_create_autocmd("BufEnter", {
   pattern = {"*.c", "*.cpp", "*.h"},
   command = "setlocal tabstop = 8 shiftwidth=8"
 })
-
