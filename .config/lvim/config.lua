@@ -1,2 +1,3 @@
-reload('user.plugins')
-reload('user.colorscheme')
+require('user.plugins')
+require('user.colorscheme')
+require('user.keybindings')
