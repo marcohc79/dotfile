@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 -- Example configs: https://github.com/LunarVim/starter.lvim
 -- Read the docs: https://www.lunarvim.org/docs/configuration
 -- Video Tutorials: https://www.youtube.com/watch?v=sFA9kX-Ud_c&list=PLhoH5vyxr6QqGu0i7tt_XoVK9v-KvZ3m6
@@ -27,3 +28,8 @@ vim.api.nvim_create_autocmd("BufEnter", {
   pattern = {"*.c", "*.cpp", "*.h"},
   command = "setlocal tabstop = 8 shiftwidth=8"
 })
+=======
+require('user.plugins')
+require('user.colorscheme')
+require('user.keybindings')
+>>>>>>> lvim_dev
