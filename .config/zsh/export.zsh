@@ -5,6 +5,11 @@ export PATH=$PATH:$HOME/.local/bin:$PATH
 export XDG_CURRENT_DESKTOP=sway
 export PATH=$PATH:$HOME/.jdks/openjdk-22.0.1/bin:$PATH
 
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/lib/go/bin
+export TERMINAL=kitty
+
 # Batman for manepage
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
