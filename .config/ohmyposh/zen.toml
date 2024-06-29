@@ -12,6 +12,10 @@ red = '#f38ba8'
 maroon = '#eba0ac' 
 peach = '#fab387'
 
+[transient_prompt]
+background = "transparent"
+template = " "
+
 [[blocks]]
 alignment = "left"
 type = "prompt"
