@@ -10,11 +10,10 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# To customize prompt
-eval "$(oh-my-posh init zsh)"
-
-# Prompt
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+# Shell integrations
+eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)" # Prompt
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -57,6 +56,6 @@ source "$HOME/.local/share/zinit/plugins/zsh-users---zsh-syntax-highlighting/the
 autoload -Uz compinit && compinit
 setopt auto_cd
 
-# Shell integrations
-eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
+function set_poshcontext() {
+    export POSH=$(date)
+}
