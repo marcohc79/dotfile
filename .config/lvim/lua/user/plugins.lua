@@ -37,5 +37,8 @@ lvim.plugins = {
         opts = function()
             return require "null-ls"
         end,
-    }
+    },
+    {
+        "diepm/vim-rest-console"
+    },
 }
