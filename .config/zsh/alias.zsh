@@ -5,7 +5,7 @@ alias nvim='lvim'
 alias c='clear'
 
 # exa
-#alias ls='eza --icons --color=always --group-directories-first'
+alias ls='eza --icons --color=always --group-directories-first'
 alias ll='eza -alF --icons --color=always --group-directories-first'
 alias la='eza -a --icons --color=always --group-directories-first'
 alias l='eza -F --icons --color=always --group-directories-first'
