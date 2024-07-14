@@ -5,6 +5,8 @@ export PATH=$PATH:$HOME/.local/bin:$PATH
 export XDG_CURRENT_DESKTOP=sway
 export PATH=$PATH:$HOME/.jdks/openjdk-22.0.1/bin:$PATH
 
+export EDITOR='nvim'
+
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/lib/go/bin

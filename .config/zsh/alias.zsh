@@ -1,7 +1,7 @@
 # Aliases
 
 alias vim='lvim'
-alias nvim='lvim'
+#alias nvim='lvim'
 alias c='clear'
 
 # exa
