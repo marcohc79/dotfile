@@ -94,7 +94,9 @@
       "  ~": "  l6174@Radon",
       "(.*) - Obsidian(.*)": "󱓧  Obsidian",
       "(.*)org.pwmt.zathura(.*)": "  Zathura",
+      "(.*) Zathura": "  Zathura",
       "(.*)Telegram(.*)": "  Telegram",
+      "(.*)emacs(.*)": "  Emacs",
     }
   },
 

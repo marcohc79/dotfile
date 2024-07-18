@@ -38,3 +38,5 @@ map R rotate
 # Fullscreen and Presentation
 map <F11> fullscreen
 map <F5> presentation
+
+set guioptions ""
