@@ -6,29 +6,28 @@ return {
       pcall(function()
         require("dap-python").setup(mason_path .. "packages/debugpy/venv/bin/python")
       end)
+      local dap = require("dap")
+      dap.adapters.python = {
+        type = "executable",
+        command = "python",
+        args = { "-m", "debugpy.adapter" },
+      }
 
-      -- local dap = require("dap")
-      -- dap.adapters.python = {
-      --   type = "executable",
-      --   command = "python",
-      --   args = { "-m", "debugpy.adapter" },
-      -- }
-      --
-      -- dap.configurations.python = {
-      --   {
-      --     type = "python",
-      --     request = "launch",
-      --     name = "Launch file",
-      --     program = "${file}",
-      --     pythonPath = function()
-      --       return "python"
-      --     end,
-      --     env = function()
-      --       local project_root = vim.fn.getcwd()
-      --       return { PYTHONPATH = project_root }
-      --     end,
-      -- },
-      -- }
+      dap.configurations.python = {
+        {
+          type = "python",
+          request = "launch",
+          name = "Launch file",
+          program = "${file}",
+          pythonPath = function()
+            return "python"
+          end,
+          env = function()
+            local project_root = vim.fn.getcwd()
+            return { PYTHONPATH = project_root }
+          end,
+        },
+      }
     end,
   },
   {
@@ -64,5 +63,22 @@ return {
         { "<leader>dS", "<cmd>lua require('neotest').summary.toggle()<cr>", desc = "Test Summary" },
       }
     end,
+  },
+  {
+    "linux-cultist/venv-selector.nvim",
+    branch = "regexp", -- Use this branch for the new version
+    cmd = "VenvSelect",
+    enabled = function()
+      return LazyVim.has("telescope.nvim")
+    end,
+    opts = {
+      settings = {
+        options = {
+          notify_user_on_venv_activation = true,
+        },
+      },
+    },
+    ft = "python",
+    keys = { { "<leader>cv", "<cmd>:VenvSelect<cr>", desc = "Select VirtualEnv", ft = "python" } },
   },
 }
