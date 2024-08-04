@@ -39,4 +39,4 @@ map R rotate
 map <F11> fullscreen
 map <F5> presentation
 
-set guioptions ""
+#set guioptions ""
