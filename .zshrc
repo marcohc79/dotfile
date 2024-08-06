@@ -16,10 +16,12 @@ eval "$(zoxide init zsh)"
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)" # Prompt
 
 # Add in zsh plugins
-zinit light zsh-users/zsh-syntax-highlighting
+zinit ice depth=1
+zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
+zinit light jeffreytse/zsh-vi-mode
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -49,8 +51,6 @@ setopt hist_find_no_dups
 source "$HOME/.config/zsh/export.zsh"
 source "$HOME/.config/zsh/alias.zsh"
 source "$HOME/.config/zsh/extract.zsh"
-source "$HOME/.local/share/zinit/plugins/zsh-users---zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
-
 
 # Load completions
 autoload -Uz compinit && compinit
